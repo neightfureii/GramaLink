@@ -1,0 +1,147 @@
+@import url("../citizen/partials/navbar.css");
+@import url("../citizen/partials/footer.css");
+@import url("../citizen/partials/mediaqueries.css");
+
+.visit-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 5rem;
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+}
+
+.visit-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+
+p {
+  margin: 0.5rem 0;
+}
+
+.visit-info {
+  background-color: #f9fafb;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+strong {
+  color: #050097;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin: 0.5rem;
+  width: 45%;
+}
+
+.accept {
+  background: linear-gradient(45deg, #34d399, #10b981);
+  color: white;
+}
+
+.accept:hover {
+  background: linear-gradient(45deg, #10b981, #059669);
+}
+
+.reschedule {
+  background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+  color: white;
+}
+
+.reschedule:hover {
+  background: linear-gradient(45deg, #2563eb, #1e40af);
+}
+
+.reschedule-section {
+  display: none;
+  text-align: left;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #1d4ed8;
+}
+
+.submit-reschedule {
+  background: linear-gradient(45deg, #f59e0b, #d97706);
+  color: white;
+  width: 100%;
+}
+
+.submit-reschedule:hover {
+  background: linear-gradient(45deg, #d97706, #b45309);
+}
+
+
+.visit-reason {
+  display: inline-block;
+  max-width: 350px;
+  max-height: 3.6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre-line;
+  cursor: pointer;
+  vertical-align: top;
+  transition: max-height 0.2s;
+}
+.visit-reason.expanded {
+  max-height: 1000px !important;
+  white-space: pre-line;
+  
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+.visit-reason,
+.visit-reason.expanded {
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+.visit-meta-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.visit-time,
+.visit-reason-label {
+  font-weight: bold;
+  color: #1e2a78;
+  margin-bottom: 0.3rem;
+}
+
+.visit-reason {
+  /* your existing styles for .visit-reason */
+  margin-bottom: 0.5rem;
+}
+

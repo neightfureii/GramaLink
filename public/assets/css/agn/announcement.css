@@ -1,0 +1,325 @@
+@import url(../agn/partials/navbar.css);
+@import url(./partials/header_icons.css);
+
+.main-content {
+    width: 100%;
+    margin-left: 7rem;
+    margin-right: 2rem;
+    /* margin-top: 2rem; */
+    padding: 1rem;
+    transition: margin-left 0.5s ease;
+}
+
+.main-sections-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem; /* Adjust gap as needed for more/less space */
+}
+
+.application-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.communityservice-container
+.rules-container
+.announcement-container {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 2rem;
+}
+
+.communityservice-header
+.rules-header
+.announcement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.communityservice-header
+.rules-header h2
+.announcement-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.insert-new-wrapper {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.insert-btn {
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    padding: 0.60rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1.0rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    min-width: 175px; /* Added to increase button width */
+}
+
+.insert-btn i {
+    font-size: 1.2rem;
+}
+
+.insert-btn:hover {
+    background-color: #b71c1c;
+}
+.communityservice-table
+.rules-table
+.announcement-table {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 1.7rem; /* Added for spacing below table */
+}
+.communityservice-table th
+.rules-table th
+.announcement-table th {
+    color: #003366;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+/* Remove border-bottom from last td in each row to avoid double lines */
+tr td:last-child {
+    border-bottom: none;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.status-badge.active {
+    background-color: #e6f7ee;
+    color: #00a854;
+}
+
+.action-icons {
+    display: flex;
+    gap: 2rem; /* Increased gap for more space between buttons */
+    color: var(--text-light);
+}
+
+.action-icons i {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.action-icons i:hover {
+    color: var(--primary-color);
+}
+
+.action-icons i.fa-edit {
+    color: #1976d2; /* blue */
+}
+.action-icons i.fa-trash {
+    color: #d32f2f; /* red */
+}
+.action-icons i.fa-eye {
+    color: #388e3c; /* green */
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(30, 41, 59, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: background 0.2s;
+}
+
+/* Modal Content */
+.modal-content {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(30, 41, 59, 0.18), 0 1.5px 6px rgba(0,0,0,0.08);
+    padding: 2.5rem 2rem 2rem 2rem;
+    min-width: 350px;
+    max-width: 95vw;
+    width: 420px;
+    position: relative;
+    animation: modalFadeIn 0.25s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@keyframes modalFadeIn {
+    from { transform: translateY(40px) scale(0.97); opacity: 0; }
+    to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* Modal Close Button */
+.modal-close {
+    position: absolute;
+    top: 1.1rem;
+    right: 1.3rem;
+    font-size: 1.6rem;
+    color: #b0b8c1;
+    cursor: pointer;
+    transition: color 0.2s;
+    z-index: 2;
+}
+.modal-close:hover {
+    color: #d32f2f;
+}
+
+/* Modal Body/Form */
+.modal-body h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #003366;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.01em;
+}
+
+.modal-body form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.modal-body label {
+    font-size: 0.97rem;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.modal-body input[type="text"],
+.modal-body textarea {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 1px solid #e0e4ea;
+    border-radius: 7px;
+    background: #f8fafc;
+    font-size: 1rem;
+    color: #222;
+    font-family: inherit;
+    resize: none;
+    transition: border 0.2s;
+}
+
+.modal-body textarea {
+    min-height: 80px;
+    max-height: 200px;
+}
+
+.modal-body input[readonly],
+.modal-body textarea[readonly] {
+    background: #f4f6fa;
+    color: #888;
+    border-color: #e0e4ea;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        width: 98vw;
+        min-width: unset;
+        padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+    }
+}
+
+/* Optional: Prevent scroll when modal is open */
+body:has(.modal-overlay[style*="display: flex"]) {
+    overflow: hidden;
+}
+
+.modal-overlay {
+    align-items: center;
+    justify-content: center;
+    /* Ensures modal is always centered in viewport */
+}
+
+.modal-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    /* Keeps modal content centered even on scroll */
+}
+
+/* Shared tab button styles */
+.tab-buttons-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 2px;
+}
+
+.tab-btn {
+    min-width: 200px;
+    padding: 14px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(145deg, #2563eb, #1e40af);
+    color: white;
+    transition: all 0.3s ease;
+    text-align: center;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+    text-transform: uppercase;
+}
+
+.tab-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
+    background: linear-gradient(145deg, #1e40af, #1e3a8a);
+}
+
+.tab-btn.active {
+    background: linear-gradient(145deg, #1e3a8a, #1e40af);
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.4);
+}

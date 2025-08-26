@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Primary Theme Colors */
+:root {
+    --primary-color: #050097;        /* Dark Blue - main color */
+    --primary-light: #4D59E7;        /* Lighter shade of blue for hover effects */
+    --primary-dark: #03006A;         /* Darker shade for buttons or highlights */
+  
+    /* Neutral Colors */
+    --white-color: #ffffff;          /* White - background, text on dark elements */
+    --medium-gray: #E0E0E0;          /* Gray for borders, secondary elements */
+    --dark-gray: #595959;            /* Text on light backgrounds */
+    --light-gray: #f9f9f9;
+    --medium-gray: #c1dee7;
+    --black-color: #000000;          /* Black for text and dark elements */
+  
+    /* Accent Colors */
+    --secondary-color: #F5A623;      /* Orange - used for highlights, alerts */
+    --accent-color: #F75945;         /* Red - for errors, warnings */
+    --green-color: #42C46F;          /* Green - for success messages, validation */
+  
+    /* Hover & Interactive States */
+    --button-hover: #3B4BDC;         /* Hover effect for buttons */
+    --link-hover: #303F9F;           /* Hover effect for links */
+  
+    /* Background Colors */
+    --background-color: #52b0cf;     /* Overall page background */
+    --footer-background: #050097;    /* Footer color (dark blue) */
+  
+    /* Text Colors */
+    --text-primary: #050097;         /* Dark blue for headings */
+    --text-secondary: #333333;       /* Dark gray for body text */
+    --text-light: #ffffff;           /* White for text on dark backgrounds */
+
+    --header-background: #F9FAFD;
+
+    --container-width-lg: 76%; /* for large devices */
+    --container-width-md: 85%; /* for medium devices */
+    --container-width-sm: 95%; /* for small devices */
+
+    --transition: all 400ms ease;
+}
+  
+body {
+    background: url(../../images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.7;
+    color: var(--black-color);
+}
+
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+a {
+    color: var(--black-color);
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+button {
+    display: inline-block;
+    background: var(--primary-dark);
+    color: var(--white-color);
+    padding: 0.3rem 0.6rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--light-gray);
+    color: var(--black-color);
+    border-color: none;
+}

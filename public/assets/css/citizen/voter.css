@@ -1,0 +1,289 @@
+@import url("./partials/navbar.css");
+@import url("../citizen/partials/footer.css");
+@import url("./partials/header_icons.css");
+
+/* Global Styles */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+} */
+
+.wrapper {
+  padding: 2rem;
+  margin-top: 60px;
+}
+
+/* Container Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto ;
+}
+
+.applications-container {
+  margin-bottom: 2rem;
+  max-width: 1100px;
+  margin: 2rem auto;
+}
+
+/* Page Title */
+.page-title {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Registration Card */
+.registration-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 60px;
+}
+
+/* Form Styles */
+.registration-form {
+  width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Submit Button */
+.submit-button {
+  background-color: var(--background-color);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+/* Search container styling */
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+}
+
+.search-input-group {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+}
+
+.search-input-group input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.search-input-group input:focus {
+  border-color: #4361ee;
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
+  outline: none;
+}
+
+.search-btn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 35px; 
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.search-btn:hover {
+  color: #4361ee;
+}
+
+
+.submit-button:hover {
+  background-color:var(--primary-dark);
+}
+
+/* Stats Card */
+.stats-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.stats-card.blue {
+  background: linear-gradient(135deg, #606060, #f2f3f4);
+  color: rgb(53, 1, 1);
+  font-weight: 600;
+}
+
+.stats-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.stats-label {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Polling Centers Table */
+.content-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.section-title {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.data-table th,
+.data-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.data-table th {
+  background-color: var(--table-header);
+  color: var(--table-header-text);
+  font-weight: 600;
+}
+
+.data-table tr:hover {
+  background-color:var(--background-color);
+  color: white;
+  transition: 0.3s ease;
+}
+
+.no-data {
+  text-align: center;
+  color: #666;
+  padding: 2rem;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.pagination-btn {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.pagination-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.pagination-info {
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wrapper {
+      padding: 1rem;
+  }
+
+  .form-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .page-title {
+      font-size: 1.5rem;
+  }
+
+  .data-table {
+      font-size: 0.9rem;
+  }
+}

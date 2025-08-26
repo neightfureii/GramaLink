@@ -1,0 +1,66 @@
+@import url(./partials/root.css);
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../images/guesthome.jpg) !important;
+    background-size: cover;
+    background-position: center;
+}
+
+.box-container{
+    display: flex;
+    gap: 10rem;
+}
+
+.box{
+    width: 300px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 3px solid var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+   
+}
+
+.box::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    transition: top 0.3s ease;
+    z-index: 0;
+}
+
+.box:hover::before{
+    top: 0;
+}
+
+.box-text{
+    position: relative;
+    z-index: 1;
+}
+
+.btn{
+    border: none;
+    padding: 12px 35px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}

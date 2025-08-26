@@ -1,0 +1,86 @@
+@import url(./partials/navbar.css);
+@import url(./partials/footer.css);
+
+/* header styles */
+
+header {
+    position: relative;
+    top: 3rem;
+    overflow: hidden;
+    height: 100vh;
+    width: fit-content;
+    margin-bottom: 5rem;
+    color: var(--white-color);
+    z-index: 1;
+}
+
+.header__container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; 
+    gap: 5rem; 
+    align-items: center;
+    height: 100%;
+}
+
+.header__left p {
+    margin: 0.5rem 0 1.0rem;
+}
+
+.call-to-action {
+    display: inline-block;
+    background: #f9f9f9;
+    color: var(--background-color);
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.call-to-action:hover {
+    background: transparent;
+    color: var(--white-color);
+    border-color: var(--white-color);
+}
+
+/* section styles */
+
+section {
+    padding: 5rem 0;
+}
+
+section h2 {
+    color: var(--text-primary);
+}
+
+.notice {
+    text-align: center;
+    font-size: 1rem;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    background: var(--light-gray);
+    transition: var(--transition);
+}
+
+.notice:hover {
+    box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
+    transform: translate(-3px,-5px);
+}
+
+
+.sectionbutton {
+    display: inline-block;
+    color: var(--text-primary);
+    font-weight: 500;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+.sectionbutton:hover {
+    background: transparent;
+    text-decoration: underline;
+}
+
+
+

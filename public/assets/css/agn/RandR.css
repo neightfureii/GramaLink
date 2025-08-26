@@ -1,0 +1,197 @@
+@import url(../agn/partials/navbar.css);
+@import url(./partials/header_icons.css);
+
+.main-content {
+    width: 100%;
+    margin-left: 7rem;
+    margin-right: 2rem;
+    /* margin-top: 2rem; */
+    padding: 1rem;
+    transition: margin-left 0.5s ease;
+}
+
+.application-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.search-bar input {
+    border: none;
+    padding: 0.5rem;
+    width: 250px;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0;
+    color: #333;
+}
+
+.records-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.records-table th,
+.records-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.records-table th {
+    background-color: #1E3A5F;
+    color: #fff;
+    font-weight: bold;
+}
+
+.records-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.records-table .action-links a {
+    margin-right: 8px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+}
+
+.records-table .action-links .view-btn {
+    background-color: #007bff;
+}
+
+.records-table .action-links .view-btn:hover {
+    background-color: #0056b3;
+}
+
+.records-table .action-links .delete-btn {
+    background-color: #dc3545;
+}
+
+.records-table .action-links .delete-btn:hover {
+    background-color: #a71d2a;
+}
+
+.records-table .action-links .edit-btn {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.records-table .action-links .edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.add-new-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #050097;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: var(--transition)
+}
+
+.add-new-btn:hover {
+    background: var(--light-gray);
+  color: var(--black-color);
+  border-color: none;
+}
+
+/* Popup Form */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    width: 50%;
+}
+
+.popup-content {
+    position: relative;
+    width: 100%;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.popup-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.popup-form input,
+.popup-form textarea,
+.popup-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.popup-form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.popup-form button:hover {
+    background-color: #218838;
+}

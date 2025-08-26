@@ -1,0 +1,102 @@
+@import url("../citizen/partials/navbar.css");
+@import url("../citizen/partials/footer.css");
+@import url("../citizen/partials/mediaqueries.css");
+
+.wrapper{
+  padding: 0;
+  background-color: #ffffff;
+  margin: 20px auto;
+  max-width: 400px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--black-color);
+  border-radius: 10px;
+}
+
+.wrapper .top{
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #050097; /*footer color*/
+  border-radius: 12px 12px 0 0;
+  position: relative;
+}
+
+.wrapper .top::before{
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: #050097;
+  bottom: -10px;
+  transform: rotate(45deg);
+}
+
+.wrapper .top i{
+  font-size: 70px;
+  color: #ffffff;
+
+}
+
+.wrapper .bottom{
+  padding: 30px;
+}
+
+.wrapper .bottom .info{
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.wrapper .bottom .input-box{
+  width: 100%;
+  height: 45px;
+  margin: 15px 0 10px 0;
+}
+
+.wrapper .bottom .input-box input{
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  border-radius: 25px;
+  outline: none;
+  transition: all 400ms ease;
+}
+.wrapper .bottom input[type="text"]{
+  padding-left: 20px;
+  border: 2px solid #e6e6e6; /*--light gray*/
+}
+.wrapper .bottom input[type="text"]:focus
+{
+  border-color: #050097;
+}
+
+
+.wrapper .bottom input[type="submit"]{
+  border: none;
+  background: #4d59e7;
+  color: #ffffff;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.wrapper .bottom input[type="submit"]:hover{
+  background: #3b4bdc; /*button hover*/
+}
+
+.notice{
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #4d59e7;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid black;
+  border-radius: 8px;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+
+}
+
+.notice.hidden{
+  opacity: 0;
+  transform: translateY(-20px);
+}

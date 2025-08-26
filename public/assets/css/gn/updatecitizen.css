@@ -1,0 +1,136 @@
+@import url("./partials/navbar.css");
+@import url("./partials/header_icons.css");
+
+
+.main-content {
+    flex: 1;
+    margin-left: 64px;
+    padding: 2rem;
+    overflow-y: auto;
+    transition: margin-left 0.5s;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--surface);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 0.9rem;
+    width: 300px;
+}
+
+/* Form Container */
+.form-container {
+    background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    flex: 1;
+    font-weight: bold;
+}
+
+.input-group input {
+    flex: 3;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.input-group button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #7c93c3;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.input-group button:hover {
+    background-color: #1e2a5e;
+}
+
+/* Citizen Table */
+.citizen-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.citizen-table th,
+.citizen-table td {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.citizen-table th {
+    background-color: #7c93c3;
+    color: white;
+}
+
+.citizen-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #7c93c3;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #1e2a5e;
+}
+
+.btn-update {
+    display: block;
+    margin: 1rem auto 0;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-update:hover {
+    background-color: #218838;
+}

@@ -1,0 +1,374 @@
+@import url("../citizen/partials/navbar.css");
+@import url("../citizen/partials/footer.css");
+
+
+.wrapper {
+  padding: 3rem 3rem 5rem 3rem;
+  background-color: #ffffff;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--black-color);
+  border-radius: 10px;
+}
+
+.header {
+    /* background-color: #1a5f7a; */
+    /* color: white; */
+    /* padding: 20px; */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    /* text-align: center; */
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    background-color: var(--medium-gray);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+  color: var(--white-color);
+}
+
+.tab.active {
+    background-color: var(--background-color);
+    color: white;
+}
+
+.content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: var(--background-color);
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #134660;
+    color: var(--white-color);
+}
+
+.complaint-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.complaint-table th,
+.complaint-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.complaint-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.status-pending {
+    background-color: #ffd700;
+    color: #000;
+}
+
+.status-resolved {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-withdrawn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    margin: 50px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 8px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.view-modal-content {
+    margin-top: 20px;
+}
+
+.view-modal-content div {
+    margin-bottom: 15px;
+}
+
+.view-modal-content strong {
+    display: inline-block;
+    width: 150px;
+}
+
+
+.camera-icon{
+    font-size: 2rem;
+    cursor: pointer;
+
+}
+
+#visitRequest {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 900px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.visit-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.visit-request-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.visit-request-table th, 
+.visit-request-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.visit-request-table th {
+    background-color: #7C93C3;
+    color: white;
+    font-weight: bold;
+}
+
+.visit-request-table tr:hover {
+    background-color: #f1f5ff;
+}
+
+.btn {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.btn-accept {
+    background-color: #4CAF50;
+    color: white;
+    margin-right: 8px;
+}
+
+.btn-accept:hover {
+    background-color: #45a049;
+}
+
+.btn-reject {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-reject:hover {
+    background-color: #d32f2f;
+}
+
+.status-label {
+    font-weight: bold;
+    color: #555;
+}
+
+.no-request {
+    text-align: center;
+    color: #999;
+    margin-top: 20px;
+}
+
+
+.upload-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #1E2A5E;
+}
+
+.add-icon {
+    font-size: 24px;
+    color: #7C93C3;
+}
+
+.image-preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.preview-wrapper {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+}
+
+.images-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.images-grid img {
+    width: 100px;
+    margin: 5px;
+    flex: 0 0 calc(33.333% - 10px); /* 3 per row with gap */
+    box-sizing: border-box;
+}
+
+.error-message {
+    color: red; 
+    text-align: center; 
+    padding: 10px; 
+    margin: 10px 0; 
+    background-color: #ffeeee; 
+    border: 1px solid #ffcccc; 
+    border-radius: 4px;
+}
+.success_message{
+    color: green; 
+    text-align: center; 
+    padding: 10px; 
+    margin: 10px 0; 
+    background-color: #ffeeee; 
+    border: 1px solid #ffcccc; 
+    border-radius: 4px;
+}
+
+
+
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+    }
+    
+    .complaint-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .modal-content {
+        margin: 20px;
+        width: auto;
+    }
+
+}
+
+
+input[type="date"],
+input[type="time"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus {
+    border-color: #7C93C3;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(124, 147, 195, 0.5);
+}
+

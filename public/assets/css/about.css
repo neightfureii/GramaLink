@@ -1,0 +1,70 @@
+@import url(./partials/navbar.css);
+@import url(./partials/footer.css);
+
+/* Header Section */
+.about__header {
+  color: var(--white-color);
+  margin-top: 5rem;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.header__container h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.header__container p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* About Section */
+.about__section {
+  padding: 50px 0;
+  background-color: transparent;
+}
+
+.about__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about__content {
+  background-color: var(--light-gray);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about__content h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.about__content p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.team__container {
+  text-align: center;
+}
+
+.teammember {
+  display: inline-block;
+  width: 30%;
+  margin: 2rem 3rem 2rem 3rem;
+}
+
+.teammember img {
+  height: 15rem;
+  border-radius: 10%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  vertical-align: bottom;
+  margin-bottom: 1rem;
+}

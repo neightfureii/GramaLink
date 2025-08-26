@@ -1,0 +1,70 @@
+@import url("../citizen/partials/navbar.css");
+@import url("../citizen/partials/footer.css");
+@import url("../citizen/partials/mediaqueries.css");
+
+.wrapper {
+  padding: 3rem 3rem 5rem 3rem;
+  background-color: #ffffff;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--black-color);
+  border-radius: 10px;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group input[type="datetime-local"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-group button {
+  padding: 10px 15px;
+  background-color: #050097;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit_new_application {
+  background-color: var(--background-color);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  display: inline-block;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.submit_new_application:hover {
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,207 @@
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-darker: #022585;
+  --secondary: #64748b;
+  --background: #f1f5f9;
+  --surface: #ffffff;
+  --text: #1e293b;
+  --text-light: #64748b;
+  --danger: #ef4444;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --bg2: #52b0cf;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--background);
+  display: flex;
+  /* min-height: 100vh; */
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.7;
+}
+
+/* Responsive Sidebar */
+.sidebar {
+  width: 4rem;
+  background: var(--primary-darker);
+  height: 100vh;
+  position: fixed;
+  transition: width 0.5s ease;
+  /* box-shadow: 2px 0 8px rgba(0,0,0,0.1); */
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.sidebar:hover {
+  width: 15rem;
+}
+
+.logo {
+  /* display: flex; */
+  /* align-items: center; */
+  /* gap: 1rem; */
+  text-align: center;
+  padding-top: 1rem;
+  /* margin-bottom: 2rem; */
+}
+
+.logo img {
+/* text-align: center; */
+  height: 2rem;
+  width: auto;
+  transition: height 0.5s ease;
+}
+
+.sidebar:hover .logo img {
+  height: 7rem;
+  width: auto;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.menu:hover {
+  margin-bottom: 1rem;
+}
+
+.menu-item {
+  position: relative;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+  /* transition: all 0.5s ease; */
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.menu-item:hover a::before, .menu-item.active a::before{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--background);
+  pointer-events: none;
+}
+
+.menu-item:hover a::after, .menu-item.active a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--background);
+  pointer-events: none;
+}
+
+.menu-item a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  color: white;
+  /* color: var(--text); */
+  text-decoration: none;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.menu-item:hover, .active {
+  background: var(--background);
+  margin-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.menu-item.active a, .menu-item:hover a {
+  color: var(--text);
+  /* color: white; */
+}
+
+.menu-item i {
+  min-width: 20px;
+  text-align: center;
+}
+
+.menu-text {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.sidebar:hover .menu-text {
+  opacity: 1;
+}
+
+/* Add this to your CSS */
+.menu-container {
+  overflow-y: auto;
+  height: 100%;
+}
+
+/* Hide scrollbar styles (optional) */
+.menu-container::-webkit-scrollbar {
+  width: 8px;
+  display: none;
+}
+/*
+.menu-container::-webkit-scrollbar-thumb {
+  background-color: var(--surface);
+  border-radius: 4px;
+}
+.menu-container::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary);
+}
+.menu-container::-webkit-scrollbar-track {
+  background: transparent;
+} */
+
+.sidebar:hover .profile-details {
+  opacity: 1;
+}
+
+.sidebar:hover + .main-content {
+  margin-left: 17rem;
+}
+
+.flash-success {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4BB543;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  transition: opacity 0.5s ease-out;
+}
+
+.flash-reject {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #b54343;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  transition: opacity 0.5s ease-out;
+}

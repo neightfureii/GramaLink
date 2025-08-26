@@ -1,0 +1,74 @@
+@import url("../citizen/partials/navbar.css");
+@import url("../citizen/partials/footer.css");
+@import url("../citizen/partials/mediaqueries.css");
+
+.wrapper {
+  padding: 3rem 3rem 5rem 3rem;
+  background-color: #ffffff;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--black-color);
+  border-radius: 10px;
+}
+
+.applications-container {
+  max-width: 1100px;
+  margin: 2rem auto;
+}
+
+.new-application-button {
+  text-align: right;
+  margin-bottom: 25px;
+}
+
+.apply-btn {
+  background-color: var(--background-color);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  display: inline-block;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.apply-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+.title {
+  margin-bottom: 2rem;
+}
+
+.applications-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.applications-table th,
+.applications-table td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.applications-table th {
+  background-color: var(--table-header);
+  color: var(--table-header-text);
+  font-weight: 600;
+}
+
+.applications-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.applications-table tr:hover {
+  background-color: var(--background-color);
+  color: white;
+  transition: 0.3s ease;
+}

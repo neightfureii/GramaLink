@@ -1,0 +1,172 @@
+@import url("./partials/navbar.css");
+@import url("./partials/header_icons.css");
+@import url("./partials/footer.css");
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  margin-left: 4rem;
+  padding: 2rem;
+  overflow-y: auto;
+  transition: margin-left 0.5s;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--surface);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 0.9rem;
+  width: 300px;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.notification-badge {
+  background: var(--primary);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.action-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.action-button:hover {
+  background: var(--primary-dark);
+}
+
+/* Charts Section */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.chart-container {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: 400px; /* Fixed height for chart containers */
+  position: relative; /* For proper chart sizing */
+}
+
+/* Daily Work Report */
+.task-list {
+  margin-top: 1rem;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--background);
+}
+
+.task-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-dot.completed { background: var(--success); }
+.status-dot.in-progress { background: var(--primary); }
+.status-dot.pending { background: var(--warning); }
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+}
+
+.status-badge.completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.in-progress {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-badge.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-report {
+  background-color: #2563eb;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-report:hover {
+  background-color: white;
+  color: black;
+}
